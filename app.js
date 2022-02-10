@@ -1,7 +1,7 @@
 // API's needed: Leaflet, Foursquare
 // Need to output a dropdownlist and submit button
 // Then draw the map with a user's geolocation
-console.log("hello");
+// And call the Foursquare API to draw pins
 
 //get user location
 async function getUserCoords() {
