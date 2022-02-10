@@ -15,7 +15,6 @@ async function getUserCoords() {
 
 //create a map
 function drawMarkers({ results }) {
-    // let coords = await getUserCoords();
     results.forEach((marker) => {
         let long = marker.geocodes.main.longitude;
         let lat = marker.geocodes.main.latitude;
@@ -36,12 +35,6 @@ submitButton.addEventListener("click", function () {
 });
 
 async function getFoursquareData(category) {
-    // Foursquare API Key fsq3wrRry/z2zhpM4YETMnpT0Qn+Zh/w9oRZy3UXWSw2krk=
-    // Client Id
-    // IDNMAAUK1M0CCKOKJYCBH1VJTC5YR2ULAH1F202T1A0GSCPC
-    // Client Secret
-    // 1F2LSI4EEZ4KJXHPY34A454U0P5G3405MDG1NVY2BLPQIWPU
-    // const fetch = require("node-fetch");
     let coords = await getUserCoords();
 
     const url = `https://api.foursquare.com/v3/places/search?query=${category}&ll=${coords.toString()}`;
@@ -71,7 +64,7 @@ window.onload = async () => {
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution:
             '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        minZoom: "15",
+        //minZoom: "15",
     }).addTo(map);
 
     // Create and add a geolocation marker:
