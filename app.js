@@ -31,6 +31,13 @@ async function drawMap() {
     marker.addTo(map).bindPopup("<p1><b>You are here</b></p1>").openPopup();
 }
 
+//get info from the select list
+const submitButton = document.getElementById("submit-btn");
+submitButton.addEventListener("click", function () {
+    let shopValue = document.getElementById("shop-select-list").value;
+    console.log(shopValue);
+});
+
 // On load:
 window.onload = async () => {
     //const coords = await getUserCoords();
